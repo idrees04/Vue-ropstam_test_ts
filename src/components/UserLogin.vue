@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
+import { RouterLink } from 'vue-router';
 // import HelloWorld from "./components/HelloWorld.vue";
 </script>
 <template>
@@ -9,12 +9,16 @@ import { RouterLink } from "vue-router";
   <div class="card-body">
     <form>
       <div class="form-group mb-2">
-        <label>Email address</label>
-        <input type="email" class="form-control form-control-lg" />
+        <label for="emaillogin">
+          <input type="email" id="emaillogin" class="form-control form-control-lg" />
+          Email address
+        </label>
       </div>
       <div class="form-group mb-4">
-        <label>Password</label>
-        <input type="password" class="form-control form-control-lg" />
+        <label for="passwordlogin">
+          <input type="password" id="passwordlogin" class="form-control form-control-lg" />
+          Password
+        </label>
       </div>
       <!-- <button type="submit" class="btn btn-dark btn-lg btn-block">
         Sign In
@@ -28,6 +32,10 @@ import { RouterLink } from "vue-router";
       <p>
         register
         <router-link :to="{ name: 'signup' }">sign up?</router-link>
+      </p>
+      <p>
+        register
+        <router-link :to="{ name: 'todo' }"> ToDO</router-link>
       </p>
     </form>
   </div>
