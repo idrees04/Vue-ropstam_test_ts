@@ -1,5 +1,6 @@
 import {
-  type App, inject, reactive, computed,
+  type App, reactive,
+  // type App, inject, reactive, computed,
 } from 'vue';
 import type { EnhancedStore } from '@reduxjs/toolkit';
 import type { RootState } from './stores/store';

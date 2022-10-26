@@ -30,8 +30,8 @@ import { RouterLink } from 'vue-router';
         <router-link to="/forgot-password">Forgot password ?</router-link>
       </p> -->
       <p>
-        register
-        <router-link :to="{ name: 'signup' }">sign up?</router-link>
+        Need an account?
+        <router-link :to="{ name: 'signup' }">sign up</router-link>
       </p>
       <p>
         register

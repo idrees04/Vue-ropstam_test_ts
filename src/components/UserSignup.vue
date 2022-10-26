@@ -26,8 +26,8 @@
         <button type="submit" class="btn text-light main-bg">Sign Up</button>
       </div>
       <p>
-        Already registered
-        <router-link :to="{ name: 'login' }">sign in?</router-link>
+        Already have an account?
+        <router-link :to="{ name: 'login' }">sign in</router-link>
       </p>
       <p>
         register
