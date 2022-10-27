@@ -12,8 +12,12 @@ export const todoSlice = createSlice({
     // removeTodo: (state) => {
     //   state.todoList.pop();
     // },
-    removeTodo: (state) => {
-      state.todoList.pop();
+    removeTodo: (state, action) => {
+    //  state.todoList.pop();
+      //    console.log(action.payload);
+      //    console.log(state.todoList.splice(action.payload));
+      //    console.log(state.todoList.splice(action.payload, 1));
+      state.todoList.splice(action.payload, 1);
       //  state.todoList = state.todoList.filter((item) => item.id !== action.payload.id);
     },
   },

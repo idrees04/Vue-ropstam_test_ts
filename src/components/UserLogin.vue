@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-// import HelloWorld from "./components/HelloWorld.vue";
-</script>
 <template>
   <div class="card-title text-center border-bottom">
     <h2 class="p-3">Login</h2>
@@ -10,13 +6,25 @@ import { RouterLink } from 'vue-router';
     <form>
       <div class="form-group mb-2">
         <label for="emaillogin">
-          <input type="email" id="emaillogin" class="form-control form-control-lg" />
+          <input
+            v-model="form.email"
+            type="email"
+            id="emaillogin"
+            class="form-control form-control-lg"
+            required
+          />
           Email address
         </label>
       </div>
       <div class="form-group mb-4">
         <label for="passwordlogin">
-          <input type="password" id="passwordlogin" class="form-control form-control-lg" />
+          <input
+            v-model="form.password"
+            type="password"
+            id="passwordlogin"
+            class="form-control form-control-lg"
+            required
+          />
           Password
         </label>
       </div>
@@ -40,3 +48,26 @@ import { RouterLink } from 'vue-router';
     </form>
   </div>
 </template>
+<script lang="ts">
+import { defineComponent, reactive } from 'vue';
+// import { RouterLink } from 'vue-router';
+// import HelloWorld from "./components/HelloWorld.vue";
+export default defineComponent({
+  setup() {
+    const form = reactive({
+      email: '',
+      password: '',
+    });
+
+    const onSubmit = () => {
+      ///    userStore.login(form.username, form.password);
+      console.log(form.email, form.password);
+    //  form.email = "";
+    //  form.password = "";
+    };
+
+    //    return { form, userStore, onSubmit };
+    return { form, onSubmit };
+  },
+});
+</script>

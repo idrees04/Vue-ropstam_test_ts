@@ -10,5 +10,10 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  // added to check error in excelent way
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "sourceMap": true
+  }
 }

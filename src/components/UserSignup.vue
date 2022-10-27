@@ -6,19 +6,37 @@
     <form>
       <div class="form-group mb-2">
         <label for="fullName">
-          <input type="text" id="fullName" class="form-control form-control-lg" />
+          <input
+            v-model="form.fullname"
+            type="text"
+            id="fullName"
+            class="form-control form-control-lg"
+            required
+          />
           Full Name
         </label>
       </div>
       <div class="form-group mb-2">
         <label for="email">
-          <input type="email" id="email" class="form-control form-control-lg" />
+          <input
+            v-model="form.email"
+            type="email"
+            id="email"
+            class="form-control form-control-lg"
+            required
+          />
           Email address
         </label>
       </div>
       <div class="form-group mb-4" for>
         <label for="password">
-          <input type="password" id="password" class="form-control form-control-lg" />
+          <input
+            v-model="form.password"
+            type="password"
+            id="password"
+            class="form-control form-control-lg"
+            required
+          />
           Password
         </label>
       </div>
@@ -36,3 +54,27 @@
     </form>
   </div>
 </template>
+<script lang="ts">
+import { defineComponent, reactive } from 'vue';
+// import { RouterLink } from 'vue-router';
+// import HelloWorld from "./components/HelloWorld.vue";
+export default defineComponent({
+  setup() {
+    const form = reactive({
+      fullname: '',
+      email: '',
+      password: '',
+    });
+
+    const onSubmit = () => {
+      ///    userStore.login(form.username, form.password);
+      console.log(form.fullname, form.email, form.password);
+      //  form.email = "";
+      //  form.password = "";
+    };
+
+    //    return { form, userStore, onSubmit };
+    return { form, onSubmit };
+  },
+});
+</script>
